@@ -94,7 +94,7 @@ function Home() {
 
             {/* about me section */}
             <section id='about-me' className='about-me'>
-                <p> Hi, my name is <span className='name'> Thwin Han Shinn </span> </p>
+                <p> Hi, my name is <span className='name'> Thwin Han Shin </span> </p>
                 <p> I am technical and creative with a passion for frontend development and digital design. I enjoy combining logic with creativity to create visually appealing and engaging digital experiences. With coding and Figma skills, I bring both technical thinking and an eye for design to everything I do. </p>
 
                 <div className='me'>

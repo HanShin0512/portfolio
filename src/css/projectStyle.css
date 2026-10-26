@@ -1,0 +1,35 @@
+.logo-Project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cropped-logo {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.logo-Project img, .cropped-thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+}
+
+.cropped-mockup {
+    width: 290px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cropped-thumbnail{
+    width: 263px;
+    height: 186px;
+    overflow: hidden;
+}

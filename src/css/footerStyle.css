@@ -1,0 +1,54 @@
+footer {
+    margin-top: 140px;
+    background-color: #FFBDF0;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    padding: 123px 40px 60px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.get-in-contact {
+    font-size: 40px;
+}
+
+.email,
+.phone {
+    font-size: 16px;
+}
+
+.icons {
+    display: flex;
+    gap: 12px;
+}
+
+.fa-regular, .fa-solid, .fa-brands {
+    font-size: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.footer-logo {
+    width: 670px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+}

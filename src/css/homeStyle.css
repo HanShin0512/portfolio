@@ -1,0 +1,154 @@
+.hero-section {
+    margin: 0 76px;
+}
+
+.hero-title {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 140px;
+}
+
+.hero-title .welcome {
+    font-size: 80px;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+.portfolio {
+    font-size: 128px;
+    font-family: "Italiana";
+}
+
+.sub-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.sub-title p {
+    margin: 0;
+    font-size: 34px;
+}
+
+.name-card {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.name-card img {
+    width: 100%;
+    height: 100%;
+}
+
+.about-me {
+    margin: 0 76px;
+    margin-top: 140px;
+    text-align: justify;
+}
+
+.name {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.me {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.me img {
+    width: 35%;
+    height: 100%;
+}
+
+.qualifications {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qualifications .skills {
+    padding-right: 100px;
+}
+
+.projects-section {
+    margin: 0 76px;
+    margin-top: 140px;
+    scroll-margin-top: 100px;
+}
+
+.projects-title {
+    font-weight: 500;
+    font-size: 34px;
+    margin-bottom: 60px;
+}
+
+.navigators {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigators button {
+    width: 300px;
+    height: 260px;
+    border: 0;
+    border-radius: 30px;
+    font-size: 20px;
+    color: #FFFFFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navigators button:hover {
+    transform: scale(0.96);
+}
+
+.navigators .logofolio {
+    background: radial-gradient(circle at center,
+            #0F3BFF 0%,
+            #C173F8 100%);
+
+    box-shadow:
+        inset 0 -35px 60px 0 #CEE3FF,
+        inset 0 -90px 100px 0 #F9A6FA,
+        inset 0 16px 40px 0 #CEE3FF;
+}
+
+.navigators .social-media {
+    background: radial-gradient(circle at center,
+            #FF2626 0%,
+            #FFBD84 100%);
+
+    box-shadow:
+        inset 0 -35px 60px 0 #CEE3FF,
+        inset 0 -90px 100px 0 #FDE798,
+        inset 0 16px 40px 0 #CEE3FF;
+}
+
+.navigators .uix {
+    background: radial-gradient(circle at center,
+            #FF0F83 0%,
+            #FFBDF0 100%);
+
+    box-shadow:
+        inset 0 -35px 60px 0 #CEE3FF,
+        inset 0 -90px 100px 0 #FFEAEA,
+        inset 0 16px 40px 0 #CEE3FF;
+}
+
+.navigators .posters {
+    background: radial-gradient(circle at center,
+            #FF0000 0%,
+            #D73CFE 100%);
+
+    box-shadow:
+        inset 0 -35px 60px 0 #CEE3FF,
+        inset 0 -90px 100px 0 #FF9E94,
+        inset 0 16px 40px 0 #CEE3FF;
+}

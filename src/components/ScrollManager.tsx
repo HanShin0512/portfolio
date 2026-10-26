@@ -8,28 +8,33 @@ const ScrollManager = () => {
   const lenis = useLenis();
 
   useLayoutEffect(() => {
-    if (pathname === "/ProjectPage") {
-      lenis?.scrollTo(0, { immediate: true });
-      window.scrollTo(0, 0);
-      return;
-    }
+    if (!lenis) return;
+
+    let frameId: number | undefined;
 
     if (pathname === "/" && hash) {
-      requestAnimationFrame(() => {
-        const section = document.getElementById(hash.slice(1));
+      frameId = requestAnimationFrame(() => {
+        const section = document.getElementById(
+          decodeURIComponent(hash.slice(1))
+        );
 
         if (section) {
-          lenis
-            ? lenis.scrollTo(section, { duration: 1.2 })
-            : section.scrollIntoView({ behavior: "smooth" });
+          lenis.scrollTo(section, {
+            duration: 1.2,
+            force: true,
+          });
         }
       });
-
-      return;
+    } else {
+      lenis.scrollTo(0, {
+        immediate: true,
+        force: true,
+      });
     }
 
-    lenis?.scrollTo(0, { immediate: true });
-    window.scrollTo(0, 0);
+    return () => {
+      if (frameId) cancelAnimationFrame(frameId);
+    };
   }, [pathname, hash, key, lenis]);
 
   return null;

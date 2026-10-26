@@ -1,40 +1,26 @@
-
-import { useLayoutEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { useLenis } from "lenis/react";
 
 const ScrollManager = () => {
-  const { pathname, hash, key } = useLocation();
-  const lenis = useLenis();
+  const location = useLocation();
+  const lastHash = useRef('');
 
-  useLayoutEffect(() => {
-    if (!lenis) return;
-
-    let frameId: number | undefined;
-
-    if (pathname === "/" && hash) {
-      frameId = requestAnimationFrame(() => {
-        const section = document.getElementById(
-          decodeURIComponent(hash.slice(1))
-        );
-
-        if (section) {
-          lenis.scrollTo(section, {
-            duration: 1.2,
-            force: true,
-          });
-        }
-      });
-    } else {
-      lenis.scrollTo(0, {
-        immediate: true,
-      });
+  // listen to location change using useEffect with location as dependency
+  // https://jasonwatmore.com/react-router-v6-listen-to-location-route-change-without-history-listen
+  useEffect(() => {
+    if (location.hash) {
+      lastHash.current = location.hash.slice(1); // safe hash for further use after navigation
     }
 
-    return () => {
-      if (frameId) cancelAnimationFrame(frameId);
-    };
-  }, [pathname, hash, key, lenis]);
+    if (lastHash.current && document.getElementById(lastHash.current)) {
+      setTimeout(() => {
+        document
+          .getElementById(lastHash.current)
+          ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        lastHash.current = '';
+      }, 100);
+    }
+  }, [location]);
 
   return null;
 };

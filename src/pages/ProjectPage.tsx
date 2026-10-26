@@ -5,12 +5,17 @@ import "../css/projectPageStyle.css";
 import LogoProject from "../components/LogoProject";
 import UIXProject from "../components/UIXProject";
 import { ProjectPageState } from "../types/ProjectTypes";
+import { useEffect } from "react";
 
 function ProjectPage() {
 
     // variables
     const location = useLocation();
     const { title, projects } = location.state as ProjectPageState;
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>
@@ -47,9 +52,9 @@ function ProjectPage() {
                             return null;
                         })
                     }
-                    {title === "UI/UX" && 
+                    {title === "UI/UX" &&
                         projects.map((project, index) => {
-                            if("thumbnail" in project) {
+                            if ("thumbnail" in project) {
                                 return (
                                     <UIXProject
                                         key={index}

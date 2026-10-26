@@ -3,8 +3,10 @@ import Home from "./pages/Home";
 import ProjectPage from "./pages/ProjectPage";
 import ScrollManager from "./components/ScrollManager";
 import { ReactLenis } from "lenis/react";
+import { useEffect } from "react";
 
 function App() {
+
   return (
     <BrowserRouter>
       <ReactLenis root options={{ autoRaf: true, lerp: 0.1 }}>

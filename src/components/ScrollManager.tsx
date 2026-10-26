@@ -28,7 +28,6 @@ const ScrollManager = () => {
     } else {
       lenis.scrollTo(0, {
         immediate: true,
-        force: true,
       });
     }
 
